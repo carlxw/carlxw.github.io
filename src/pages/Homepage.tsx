@@ -39,6 +39,7 @@ const Hello = () => {
                 <Typography variant="h1" sx={{ ...H1_SX }}>You get free money.</Typography>
                 <Typography variant="h6">Just kidding! Now that I have your attention, Hi! My name is Carl and I am a { date.getFullYear() - 2004 } years old student studying Computer Engineering at the University of Waterloo!</Typography>
                 <Typography variant="h6">My favourite quote is from Bill Gates: <em>“I choose a lazy person to do a hard job, because a lazy person will find an easy way to do it.”</em></Typography>
+                <Typography variant="h6">Also, this website is not AI generated. I chose a gradient background before AI started doing it :)</Typography>
                 <Typography variant="h6">If you ever want to connect, feel free to find my socials below!</Typography>
             </Stack>
             <Box { ...IMAGE_BOX_PROPS }/>
