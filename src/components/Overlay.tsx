@@ -1,4 +1,4 @@
-import { Box, Button, Divider, Link, List, ListItem, ListItemIcon, Stack, Typography } from "@mui/material"
+import { Box, Button, Divider, Link, List, ListItem, Stack, Typography } from "@mui/material"
 import React from "react"
 import { FiExternalLink } from "react-icons/fi"
 import { ProjectData } from "../pages/PersonalProjects"
@@ -106,4 +106,6 @@ export const Overlay = ({data}) => {
             <Stack id="overlay_background" onClick={overlayOff} />
         </>
     )
+    
+    return null
 }

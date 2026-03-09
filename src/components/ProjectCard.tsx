@@ -4,7 +4,7 @@ import { FiExternalLink } from "react-icons/fi"
 import { FaLock } from "react-icons/fa"
 import { overlayOn } from "./Overlay"
 import React from "react"
-import { Box, Button, Divider, Link, Stack, Typography } from "@mui/material"
+import { Box, Divider, Link, Stack, Typography } from "@mui/material"
 import { ProjectData } from "../pages/PersonalProjects"
 import { STACK_CENTRE } from "./PageWrapper"
 
@@ -52,7 +52,7 @@ const ProjectCard = (props: { project: ProjectData, setData: Function}) => {
                     buttons.map((config, i) => {
                         const destination = project[config.key]
                         if (!destination) {
-                            return
+                            return <></>
                         }
                         
                         return <Link href={destination} target="_blank" rel="noreferrer" sx={{ color: "black" }} className="hover_increase">
