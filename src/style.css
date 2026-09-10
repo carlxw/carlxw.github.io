@@ -1,7 +1,11 @@
 @import "tailwindcss";
 
 div, span {
-  display: flex
+  display: flex;
+}
+
+a:hover {
+  cursor: pointer;
 }
 
 /*

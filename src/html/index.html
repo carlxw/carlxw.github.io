@@ -9,12 +9,17 @@
   </head>
   <body>
     <div class="flex-col">
-      <div class="flex-row justify-between">
-        <span>
+      <!-- NAVIGATION BAR -->
+      <div class="
+        flex-row justify-between items-center
+        h-16
+        pl-10 pr-10
+      ">
+        <span class="font-bold text-2xl">
           Carl Wang
         </span>
         
-        <span class="flex-row gap-10">
+        <span class="flex-row gap-15">
           <a>
             Home
           </a>
@@ -27,52 +32,83 @@
         </span>
       </div>
       
-      <div class="flex-row">
-        <div class="w-1/2 flex-col">
-          <h1>
+      <!-- MAIN CONTENT -->
+      <div class="
+        flex-row items-center gap-25
+        p-25 
+        h-[calc(100vh-64px)]
+      ">
+        <div class="w-1/2 flex-col gap-15">
+          <p class="font-extrabold text-8xl">
             You get free money.
-          </h1>
+          </p>
   
-          <div>
-            Just kidding! Now that I have your attention, Hi! My name is Carl and I am a 22 years old student studying Computer Engineering at the University of Waterloo!
-            My favourite quote is from Bill Gates: “I choose a lazy person to do a hard job, because a lazy person will find an easy way to do it.”
-            If you ever want to connect, feel free to find my socials below!
+          <div class="flex-col gap-5 text-lg">
+            <p id="hello">
+              Just kidding! Now that I have your attention, Hi! My name is Carl and I am a %%CALCULATED_AGE%% years old student studying Computer Engineering at the University of Waterloo!
+            </p>
+            <script>
+              const REPLACE = "%%CALCULATED_AGE%%"
+              const hello = document.getElementById("hello");
+              hello.textContent = hello.textContent.replace(
+                REPLACE,
+                (new Date().getFullYear()) - 2004
+              );
+            </script>
+            
+            <p>
+              My favourite quote is from Bill Gates: “I choose a lazy person to do a hard job, because a lazy person will find an easy way to do it.”
+            </p>
+            <p>
+              If you ever want to connect, feel free to find my socials below!
+            </p>
           </div>
         </div>
 
-        <div class="w-1/2">
+        <div class="w-1/2 p-10">
           <img src="/cartoonme.png" />
         </div>
       </div>
   
+      <!-- FOOTER -->
       <div class="
-        flex-row justify-between
-        ml-2 mr-2
+        flex-row justify-between items-center
+        pl-10 pr-10
+        h-16
       ">
         <span>
           copyright
         </span>
         
-        <span class="flex-row gap-5">
-          <a>
+        <span class="flex-row gap-10">
+          <a href="https://www.linkedin.com/in/carlxw/" target="_blank">
             LinkedIn
           </a>
-          <a>
+          <a href="mailto:cx2wang@uwaterloo.ca" target="_blank">
             Email
           </a>
-          <a>
+          <a href="https://www.github.com/carlxw" target="_blank">
             GitHub
           </a>
-          <a>
+          <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank">
             YouTube
           </a>
         </span>
   
-        <span>
+        <code class="font-mono">
           !();
-        </span>
+        </code>
       </div>
     </div>
+
+    <!-- COPYRIGHT NOTICE -->
+    <!--
+    
+    <div class="w-100vw justify-center items-center">
+      COPYRIGHT TEXT HERE - TO HIDE/TOGGLE
+    </div>
+    
+    -->
     <script type="module" src="/src/main.ts"></script>
   </body>
 </html>
